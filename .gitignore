@@ -1,0 +1,9 @@
+# Ingore all downloaded datasets
+Data
+
+# Python ignore files
+__pycache_/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
