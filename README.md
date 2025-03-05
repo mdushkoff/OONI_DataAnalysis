@@ -3,13 +3,12 @@
 ## Installation
 
 ```bash
-$ module load miniconda3
 $ conda create -n "ooni" python=3.9.21 ipython
 $ conda init
 $ source ~/.bashrc
 (base) $ conda activate ooni
 (ooni) $ pip install oonidata
-(ooni) $ conda install numpy sklearn pandas tqdm
+(ooni) $ conda install numpy scikit-learn pandas tqdm
 (ooni) $ conda install -c conda-forge jupyterlab nb_conda_kernels
 ```
 
