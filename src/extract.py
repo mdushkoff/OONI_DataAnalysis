@@ -124,11 +124,11 @@ def process_schema(obj, schema):
         out["failure"] = test_keys["failure"]
     elif (schema == "telegram"):
         out["resolver_asn"] = obj["resolver_asn"]
-        out["failure"] = test_keys["failure"]
-        out["telegram_http_blocking"] = test_keys["telegram_http_blocking"]
-        out["telegram_tcp_blocking"] = test_keys["telegram_tcp_blocking"]
-        out["telegram_web_failure"] = test_keys["telegram_web_failure"]
-        out["telegram_web_status"] = test_keys["telegram_web_status"]
+        out["failure"] = test_keys.get("failure")
+        out["telegram_http_blocking"] = test_keys.get("telegram_http_blocking")
+        out["telegram_tcp_blocking"] = test_keys.get("telegram_tcp_blocking")
+        out["telegram_web_failure"] = test_keys.get("telegram_web_failure")
+        out["telegram_web_status"] = test_keys.get("telegram_web_status")
     elif (schema == "tor"):
         # Handle empty test keys:
         if (test_keys is None):
@@ -178,14 +178,14 @@ def process_schema(obj, schema):
         out["accessible"] = test_keys.get("accessible")
     elif (schema == "whatsapp"):
         out["resolver_asn"] = obj["resolver_asn"]
-        out["failure"] = test_keys["failure"]
-        out["registration_server_failure"] = test_keys["registration_server_failure"]
-        out["registration_server_status"] = test_keys["registration_server_status"]
-        out["whatsapp_endpoints_blocked"] = len(test_keys["whatsapp_endpoints_blocked"])
-        out["whatsapp_endpoints_dns_inconsistent"] = len(test_keys["whatsapp_endpoints_dns_inconsistent"])
-        out["whatsapp_endpoints_status"] = test_keys["whatsapp_endpoints_status"]
-        out["whatsapp_web_failure"] = test_keys["whatsapp_web_failure"]
-        out["whatsapp_web_status"] = test_keys["whatsapp_web_status"]
+        out["failure"] = test_keys.get("failure")
+        out["registration_server_failure"] = test_keys.get("registration_server_failure")
+        out["registration_server_status"] = test_keys.get("registration_server_status")
+        out["whatsapp_endpoints_blocked"] = len(test_keys.get("whatsapp_endpoints_blocked"))
+        out["whatsapp_endpoints_dns_inconsistent"] = len(test_keys.get("whatsapp_endpoints_dns_inconsistent"))
+        out["whatsapp_endpoints_status"] = test_keys.get("whatsapp_endpoints_status")
+        out["whatsapp_web_failure"] = test_keys.get("whatsapp_web_failure")
+        out["whatsapp_web_status"] = test_keys.get("whatsapp_web_status")
 
     return out
 
